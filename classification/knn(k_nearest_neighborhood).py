@@ -1,5 +1,3 @@
-#http://bilgisayarkavramlari.sadievrenseker.com/
-#http://bilgisayarkavramlari.sadievrenseker.com/2008/11/17/knn-k-nearest-neighborhood-en-yakin-k-komsu/
 #sınıflandrılmış veri kümesi elimize verildiğinde yeni bir değerin hangi kategoriye girdiğini bulmak için
 #verilen değerin en yakın 3 komşusunu buluyoruz. Bu komşulardan hangi kategorideki komşu daha fazla ise yeni gelen değeri o değerdir diye sınıflandırıyoruz.
 #burada kullanılan mesafe minkovski algoritmasıdır. yani x-y karesinin karekökü bildiğimiz mesefe kavramı.

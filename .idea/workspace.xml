@@ -12,7 +12,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../machine-learning-algorithms/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -21,6 +21,26 @@
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tennis_playing_analysis.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../machine-learning-algorithms/prediction/tennis_playing_analysis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="knn(k_nearest_neighborhood).py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../machine-learning-algorithms/classification/knn(k_nearest_neighborhood).py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -59,6 +79,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>plt</find>
+      <find>bilgisayarkavramlari</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/../machine-learning-algorithms</dir>
@@ -67,7 +88,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/prediction/linear_regression_ visualization.py" />
         <option value="$PROJECT_DIR$/prediction/linear_regression.py" />
         <option value="$PROJECT_DIR$/prediction/multiple_linear_regression.py" />
         <option value="$PROJECT_DIR$/prediction/model_variable_selection.py" />
@@ -118,6 +138,7 @@
         <option value="$PROJECT_DIR$/clustering/unsupervised_learning_note" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/../machine-learning-algorithms/README.md" />
+        <option value="$PROJECT_DIR$/../machine-learning-algorithms/classification/knn(k_nearest_neighborhood).py" />
       </list>
     </option>
   </component>
@@ -152,20 +173,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="machine-learning-algorithms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="machine-learning-algorithms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="machine-learning-algorithms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clustering" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -647,14 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../machine-learning-algorithms/classification/knn(k_nearest_neighborhood).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="62" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../machine-learning-algorithms/classification/iris_dataset.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -819,14 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../machine-learning-algorithms/prediction/tennis_playing_analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="114" column="21" lean-forward="false" selection-start-line="114" selection-start-column="21" selection-end-line="114" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../machine-learning-algorithms/prediction/model_karşılaştırma_notları.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -901,6 +892,22 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../machine-learning-algorithms/prediction/tennis_playing_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../machine-learning-algorithms/classification/knn(k_nearest_neighborhood).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
