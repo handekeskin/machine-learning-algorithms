@@ -1,0 +1,21 @@
+#unsupervised öğrenmede elimizdeki örneklerin hangi sınıf dahil olduğunu ve kaç sınıf olduğunu bilmiyoruz.
+#biz örneklerden kendimiz sınıfları buluyoruz. Bir gözetim yapılmadan sonucu kendisi buluyor.
+#cluster içinde kalan elemanların birbine uzaklığını minimum da tutmak ve clusterlar arası mesafeyi maximum tutmak.
+#supervised öğrenmede ise baştan sınıfların tanımı belli. Yani ön bir sınıf tanımı bulunuyor.
+#unsuvervised learning temelde 3  konu için kullanılıyor - müşteri segmentesyonu -pazar segemntasyonu -sağlık ve görüntü işleme
+#müşteri segmentasyonu --hangi ürünü hangi müşteriye satarız? --hangi reklamı hangi müşteriye göstermeliyiz?
+#1-collaborating filtering--müşterinin kendisine benzer tipteki insanların davranışlarına bakılması--ben bir ürünü aladıysam ve bana benzer davraış gösteren insnalarında alma olasılığı yüksektir.
+#2-özel kampanyalar--örneğin bir segmentteki müşterilerin hepsi metroya biniyor. ve araba satmak istiyorsunuz o zaman araba reklamını metroya koyabilirsiniz
+#3-tehdit ve sahtekarlık yakalama--siz tehdit yada sahtekarlık oluşturan bir segmente girerseniz sizin yaptığınız davranışlar önelenebilir.
+#tehdit ve sahtekarlıkta sınıflamada daha önce sahtekarlık yapnların davranışlarını verip bu davranışları sergileyenleri bul deneniyor.
+#outlier datalar clustering algoritmasinda çok kolay ortaya çıkıyor. Yani kendi kümelerimizi oluşturduğumuzda hiç bir sınıfa dahil olamayan örnekler çok kolay tespit edilir.
+#4-eksik verilerin tamamlanması--müşterinin sagmentinde bulunan insanların orataması ve ya çok sayıda tekrarlayan veriyi eksik veriler için kullanılabilir.
+#5-verilerin alt kümesi üerinden yapılan tüm işlemler
+#pazar segmentasyonu
+#1-davranışsal segmentasyon--kullanıcı özelliklerine bakarak android yada ios kullanıcı tipi insanları bulma
+#2-demografik segmentasyon-- yaş cinsiyet eğitim düzeyi
+#3-psikolojik segmentasyon--müşteri hayalleri
+#4-coğrafi segmentasyon--ülke şehir
+#bunların segmentasyonunu kendisi bulabiliyor
+#5-verilerin alt kümesi üerinden yapılan tüm işlemler
+#görüntü işlemede çok kallılıyor.

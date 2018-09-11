@@ -1,0 +1,79 @@
+#karmaşıklık matrisi
+#                Tahmin C1            Tahmin C2
+#Gerçek C1     true positive      false negative
+#Gerçek C2     false positive     true negative
+#diyogandaki değerler başarılı sınıflandırılan değerler
+
+#accuracy M : acc(M) model için yüzde kaç doğru sınıflandırma olduğu
+#acc(M)=(True pozitif+ true negatif) /(true pozitif+ true negatif+ false pozitif+ false negatif)
+
+#error rate (misclassification rate)= 1-acc(M)
+#error rate (misclassification rate)= 1-acc(M)= (false pozitif+ false negatif) /(true pozitif+ true negatif+ false pozitif+ false negatif)
+#accurancy değeri önemli ama dengesiz dağlmış verilerde sadece buna bakmak sorun olabilir. (dengesiz derken sınıflandırmada bazı değerlarin çok az yada çok olmasu yani sınıflandırma sonuçlarının dengesiz olması )
+
+#sensivity (recall) = true positive /(true positive+false negative) #true positive regression rate#
+#sensivity veya recall veya true positive rate değeri gerçekte bu adam yes (örnek yes değeri kanser ,bilgisayar almış vb.) biz onu ne tahmin etmişiz onu buluyor.
+#gerçekte doğru olan bir değeri ne kadar iyi tahmin etmiş.
+
+#specifity = true negative /(true negative+false positive ) #true negative regression rate#
+#gerçekte adam no biz kaçını doğru sınıflandırmışız
+
+#precision  = true positive /(true positive +false pozitive )
+#tamnin yes ise kaçı doğru sınıflandırılmış
+
+#prevelance = (true positive + false negative) /(true pozitif+ true negatif+ false pozitif+ false negatif)
+#gerçekte yes dağılımı oranı
+
+#F1 score= 2(true positive)/ (2(true positive) + false positive + false negative)
+#inbalance data setlerinde F1 score bu dengesizliği giderdiği için kullanılan bir skordur
+
+#        165          Tahmin C1(yes)            Tahmin C2(no)
+#Gerçek C1 (yes)       tp=100                     fn=5          105
+#Gerçek C2 (no)        fp=10                      tn=50         60
+#                       110                       55
+
+#acc(M) = (tp+tn)/(fp+fn+tp+tn)= (50+100)/165=0.91 (kaç doğru sınıflama var?)
+#error_date = (fp+fn)/(fp+fn+tp+tn) =(10+5)/165=0.09 (kaç yanlış sınıflama var?)
+#true positive rate(sensivity/recall) = tp / (tp+fn) = 100 /(100+5)=0.95 (gerçekte yes ise kaçı doğru sınıflanmış?)
+#false positive rate= fp / (fp+tn) = 10 /(50+10)=0.17 (gerçek no ise kaçını dopru olarak sınıflanmış?) (bence gerçekte no ben kaçını yanlış bilmişim)
+#specifity(true negative rate) = tn /(tn+fp ) = 50 /(50+10)= 0.83 (gerçekte no ise kaçı doğru sınıflanmış?)
+#precision  = tp /(tp+fp ) =  100/ (100+10) = 0.91 (tamnin yes ise kaçı doğru)
+#prevelance = (tp+fn)/(fp+fn+tp+tn)= (5+100)/165=0.64 (gerçekte yes dağılımı oranı) (burda sınıfların dağılım oranlarınıda analaybiliriz)
+
+#False positive (tip 1 hata) denir
+#False negatif  (tip 2 hata) denir
+
+#doğruluk paradoksu (accurancy paradox)
+
+#        10000         Tahmin C1(yes)            Tahmin C2(no)
+#Gerçek C1 (yes)       tp=9500                     fn=400         9900
+#Gerçek C2 (no)        fp=50                       tn=50          100
+#                      9550                        450
+
+#zeroR algoritmasında
+#        10000         Tahmin C1(yes)            Tahmin C2(no)
+#Gerçek C1 (yes)       tp=9900                     fn=0
+#Gerçek C2 (no)        fp=100                      tn=0
+#9900 tane gerçekte yes olan değer var ve 100 tane no gelen değer
+#zeroR algoritmsında test ve traini nasıl seçersek seçelim yes ve ya no değerlerinden zaten gerçek hayatta çok olanı train kümesinde de çok sayıda olacaktır
+#biz yeni bir tahmin yapacağımız zaman yeni gelen değeri zero algoritmasında ihtimali fazla olan değer olaak veriyoruz. Yani yukarıdaki örnekte gerçekte tes olan fazla olduğu için yen gelen değerin tahmini yes oluyor.
+#buna bakarsak zeroR uygulamasının başarı değeri 9900/10000 dir ve yukarıda sınıflandırma algoritmasıyla bulduğumuz doğruluk değerinden fazladır.
+#yani sadece accurancy değerine bakılarak algoritma karşılaştırması yapılırsa yanlış olur.
+#fakat biz zeroR algoritmasını base olarak kabul ediyoruz ve ben herhangi bir şey yapmasam genelde çoğunluk neyse yeni gelenide o sınıfa koysam
+#çıkan başarı değerinden daha düşük bir başarı oranımız varsa o sınıflandırma algoristmasında sorun vardır.
+
+#ROC eğrisi (Receiver Operating characteristic)
+
+#true positive rate(sensivity/recall) =  tp / (tp+fn) (gerçekte yes ise kaçı doğru sınıflanmış?)
+#false positive rate= fp / (fp+tn) (gerçekte no ise kaçı doğru sınıflanmış?)
+#roc eğrisinde tpr y eksenine fpr de x ekseni olursa bu koyulan değerler ile iki boyutlu uzayda değerler okunabilir
+#en iyi durum tpr=100 fpr=0 olma durumudur. tpr 100 yani herşey doğru bilmiş fpr 0 da hiç hata yapmamış demek
+#biz birden fazlasınıflama algoritması çıkardık ve onların tpr ve fpr değerlerini bulduk diyelim sonrasında ise
+#bu değeleri uzayda yerleştirip buları kapsayacak doğrular ile bir alan oluşturduk. Örneği ekran görüntülerinde var
+#eğer bu alanın içinde kalan bir algoritma varsa bizim için yararsız bir algoritmadır.
+#değişkenlerin dengesine göre bir doğruluk eğrisi oluşur. mesela yes ve no eğit ise eğim 45 derecedir
+#bu eğimde bizim algoritmamiz için tpr ve ftr nokasından geçen doru çizilir ve her zaman 135 derece eğimli olan eğri ile kesitiği noktadaki y değeri accury değerini verir. Örnek ekran görüntüsü mevcut.
+
+#AUC (AREA UNDER CURVE)
+#ftr ve tpr değerleri ile çizilen alan ne kadar büyükse bizim için o kadar iyi oluyor. Yukarda anlatılan alana auc diyor.
+#under curve alanı ne kadar büyükse bizim algoritmamızın başarı olanı o kadar çok oluyor.
