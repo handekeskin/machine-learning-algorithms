@@ -1,5 +1,5 @@
 # Machine learning algorithms
-A collection of clean implementations of machine learning algorithms.
+A collection of implementations of machine learning algorithms.
 
 
 ## Prediction
